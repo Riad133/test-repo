@@ -1,0 +1,1518 @@
+{
+	"info": {
+		"_postman_id": "e3808d27-633d-43bf-ad98-ad5d2370934f",
+		"name": "SME-Infosight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18704762",
+		"_collection_link": "https://bbl2021.postman.co/workspace/My-Workspace~a26e77ce-5cdf-4ea0-806a-5dfa09a1ca02/collection/18704762-e3808d27-633d-43bf-ad98-ad5d2370934f?action=share&source=collection_link&creator=18704762"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\":\"20432\",\r\n    \"Password\":\"Pass123.\",\r\n    \"RefreshToken\":\"\",\r\n    \"GrantType\":\"password_grant\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{end-point}}/api/Login",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/Account/GetProfile",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Account",
+						"GetProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MyTeam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/Account/GetMyTeam",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Account",
+						"GetMyTeam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerDetails?cif=00000013",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerDetails"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "00000013"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerAgeClasification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerDetails/GetCustomerAgeClasification?cif=00000013",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerDetails",
+						"GetCustomerAgeClasification"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "00000013"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerAccountsByCif",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerAccounts/GetCustomerAccountsByCif?cif=02788179",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerAccounts",
+						"GetCustomerAccountsByCif"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "02788179"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLoanAccountInfoByAccountNumber",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/LoanAccount/GetLoanAccountInfoByAccountNumber?accountNumber=1501600034621001",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"LoanAccount",
+						"GetLoanAccountInfoByAccountNumber"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "1501600034621001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccountsByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerAccounts/GetAccountsByUser?userid=A10735&pageSize=10&pageNumber=1&schmType=CAA",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerAccounts",
+						"GetAccountsByUser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "A10735"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "schmType",
+							"value": "CAA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccountMiniStatement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/AccountStatement/GetMiniStatement?accountNumber=1503101467858001",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"AccountStatement",
+						"GetMiniStatement"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "1503101467858001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard/GetAccountInfoSummary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/Dashboard/GetAccountInfoSummary?userid=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Dashboard",
+						"GetAccountInfoSummary"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard/GetCardKpiSummary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzMDkyMyIsImVtYWlsIjoibmF6bXVsYWxhbS5zaWRkaXFlQGJyYWNiYW5rLmNvbSIsIm5hbWUiOiJNUi4gTWQgTmF6bXVsIFNpZGRpcWUiLCJTdXBlclZpc29yIjoiMjcyNTYiLCJTdXBlclZpc29yTmFtZSI6Ik1SLiBNdW50YXNpciBSYWhtYW4iLCJSb2xlcyI6IkFkbWluIiwiQ2xpZW50IjoiQXBwVXNlciIsIlNvdXJjZSI6ImluZm9zaWdodCIsIm5iZiI6MTcyNzM0MTU2NCwiZXhwIjoxNzI3NzAxNTY0LCJpYXQiOjE3MjczNDE1NjQsImlzcyI6IkJyYWMgQmFuayBQTEMiLCJhdWQiOiJCcmFjIEJhbmsgUExDIn0.wNKBANN8DR2R8qZjbTkBH0kPxSPTOVuSV1LIWESg7nEtKQ6ZtVIYlF8zW9hwc4AyHgYsXqfYKzL-eA86XZ_fGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/Dashboard/GetCardKpiSummaryInfo?userid=EZB2892",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Dashboard",
+						"GetCardKpiSummaryInfo"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "EZB2892"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard/GetRefreshAccountInfoSummary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					},
+					{
+						"key": "x-latitude",
+						"value": "23.0000000000"
+					},
+					{
+						"key": "x-longitude",
+						"value": "90.9999999"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/Dashboard/GetRefreshAccountInfoSummary?userid=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Dashboard",
+						"GetRefreshAccountInfoSummary"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLoanCollecionDetailsInfoByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/LoanAccount/GetLoanCollecionDetailsInfoByUser?userid=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"LoanAccount",
+						"GetLoanCollecionDetailsInfoByUser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCasaAccountDetailsInfoByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerAccounts/GetCasaAccountDetailsInfoByUser?userid=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerAccounts",
+						"GetCasaAccountDetailsInfoByUser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLeastLoanCollecionTransactionByAcid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/LoanAccount/GetLeastLoanCollecionTransactionByAcid?acid=AA7101465&type=LOAN",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"LoanAccount",
+						"GetLeastLoanCollecionTransactionByAcid"
+					],
+					"query": [
+						{
+							"key": "acid",
+							"value": "AA7101465"
+						},
+						{
+							"key": "type",
+							"value": "LOAN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGuarantorsByAcno",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/LoanAccount/GetGuarantorsByAcno?acno=1501600034621001",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"LoanAccount",
+						"GetGuarantorsByAcno"
+					],
+					"query": [
+						{
+							"key": "acno",
+							"value": "1501600034621001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLoanDocumentsByAcno",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/LoanAccount/GetLoanDocumentsByAcno?acno=1501600034621001",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"LoanAccount",
+						"GetLoanDocumentsByAcno"
+					],
+					"query": [
+						{
+							"key": "acno",
+							"value": "1501600034621001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountStatement/GetAccountBalance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/AccountStatement/GetAccountBalance?accountNumber=1501600034621001",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"AccountStatement",
+						"GetAccountBalance"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "1501600034621001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerAccountsSummaryByCif",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerAccounts/GetCustomerAccountsSummaryByCif?cif=00000007",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerAccounts",
+						"GetCustomerAccountsSummaryByCif"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "00000007"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTypewiseCustomerAccountsByCif",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CustomerAccounts/GetCustomerAccountsSummaryByCif?cif=00000007",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CustomerAccounts",
+						"GetCustomerAccountsSummaryByCif"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "00000007"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Username\":\"20432\",\n    \"Password\":\"Pass123.\",\n    \"RefreshToken\":\"\",\n    \"GrantType\":\"password_grant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{end-point}}/api/Login",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\": \"MobileUser1\",\n    \"Password\": \"87654321\",\n    \"deviceImei\": \"5cc76f42ddc7c31d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "1624"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 05:00:14 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"001\",\n    \"responseMessage\": \"Successfull\",\n    \"userDetails\": {\n        \"userID\": 23227,\n        \"pin\": \"0000\",\n        \"fullName\": \"Mobile User\",\n        \"userName\": \"MobileUser1\",\n        \"email\": \"abc@xyz.com\",\n        \"password\": null,\n        \"roleID\": 3047,\n        \"departmentType\": 0,\n        \"departmentID\": 0,\n        \"zone\": null,\n        \"territory\": null,\n        \"unit\": null,\n        \"crmCenter\": null,\n        \"rocName\": null,\n        \"wingID\": 0,\n        \"supervisorUserID\": 0,\n        \"designation\": \"\\\"\\\"\",\n        \"isActive\": true,\n        \"passwordSalt\": null,\n        \"saltedHash\": null,\n        \"branchId\": 0,\n        \"branchName\": null,\n        \"sol\": null,\n        \"homeAddress\": null,\n        \"homePhone\": null,\n        \"officePhone\": null,\n        \"mobileNumber\": null,\n        \"officeAddress\": null,\n        \"themeName\": \"0\",\n        \"productTitle\": \"0\",\n        \"isLocked\": false,\n        \"lastLockoutDate\": \"0001-01-01T00:00:00\",\n        \"isApproved\": true,\n        \"createDate\": \"2021-12-01T19:22:31.5\",\n        \"lastLoginDate\": \"2021-12-01T19:36:56.44\",\n        \"failedPasswordAttemptCount\": 0,\n        \"failedPasswordAttemptWindowStart\": null,\n        \"lastPasswordChangedDate\": \"2022-06-27T11:30:54.453\",\n        \"gender\": \"0\",\n        \"createdBy\": 240,\n        \"approvedBy\": 17848,\n        \"approvedDate\": \"2021-12-01T19:25:21.64\",\n        \"userLoggedIn\": 0,\n        \"roleName\": null,\n        \"isDepositUser\": false,\n        \"isCVUUser\": false,\n        \"photoByte\": null,\n        \"isOTPRequired\": false\n    },\n    \"securityToken\": \"Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiTW9iaWxlIFVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhYmNAeHl6LmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMjMyMjciLCJleHAiOjE2NTk1MDQ2MTQsImlzcyI6IkJyYWMgQmFuayIsImF1ZCI6IkNvbm5lY3QgUGx1cyJ9.m9Eg-9aQIu1nU2c5dgSkHWjZSqOzHN6VdfAfJDcJrE0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetCustomer360Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/Customer/GetCustomer360Info?cif=00612093",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"Customer",
+						"GetCustomer360Info"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "00612093"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PsoWiseDpdDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/PsoWiseDpd/GetDpdDetails?userid=22186&Dpd=X DPD",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"PsoWiseDpd",
+						"GetDpdDetails"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "22186"
+						},
+						{
+							"key": "Dpd",
+							"value": "X DPD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PsoWiseDpdGrouping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/PsoWiseDpd/GetDpdGrouping?userid=22186",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"PsoWiseDpd",
+						"GetDpdGrouping"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "22186"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditcardInfoDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CreditcardInfo/GetCreditcardDetailsList?userid=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CreditcardInfo",
+						"GetCreditcardDetailsList"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditcardCurrentEMi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CreditcardInfo/GetCreditcardCurrentEmi?userid=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CreditcardInfo",
+						"GetCreditcardCurrentEmi"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCreditcardTopTenUsage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CreditcardInfo/GetCreditcardTopTenUsage?cardNumber=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CreditcardInfo",
+						"GetCreditcardTopTenUsage"
+					],
+					"query": [
+						{
+							"key": "cardNumber",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCreditcardTopTenUsage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CreditcardInfo/GetCreditcardTopTenCollection?cardNumber=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CreditcardInfo",
+						"GetCreditcardTopTenCollection"
+					],
+					"query": [
+						{
+							"key": "cardNumber",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCreditCardCustGeneralDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CreditcardInfo/GetCreditCardCustGeneralDetails?cif=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CreditcardInfo",
+						"GetCreditCardCustGeneralDetails"
+					],
+					"query": [
+						{
+							"key": "cif",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCreditCardCustAccountDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-channel",
+						"value": "D53BC2BA-3C7E-4CD9-937F-FB962EFF9C2E"
+					},
+					{
+						"key": "x-clientid",
+						"value": "infosight"
+					},
+					{
+						"key": "x-clientsecret",
+						"value": "b8642056-667e-444e-b55f-502d3493dff5"
+					}
+				],
+				"url": {
+					"raw": "{{end-point}}/api/CreditcardInfo/GetCreditCardCustAccountDetails?cardNo=20432",
+					"host": [
+						"{{end-point}}"
+					],
+					"path": [
+						"api",
+						"CreditcardInfo",
+						"GetCreditCardCustAccountDetails"
+					],
+					"query": [
+						{
+							"key": "cardNo",
+							"value": "20432"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
